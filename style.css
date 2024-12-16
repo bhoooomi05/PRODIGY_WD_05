@@ -1,0 +1,173 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #3498db;  /* Blue fallback background color */
+}
+
+/* Slide styling for background images */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 15s infinite;
+    transition: opacity 0.5s ease-in-out; /* Fast transition for opacity */
+}
+
+/* Keyframe for sliding images */
+@keyframes slide {
+    0% { opacity: 1; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* App container styling */
+.app-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.app-container:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Weather card container styling */
+.weather-card {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Input and button container */
+.input-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input field styling */
+.input-container input {
+    padding: 15px;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #4CAF50;
+    background-color: #f7f7f7;
+    outline: none;
+}
+
+/* Button styling */
+.input-container button {
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.input-container button:active {
+    background-color: #388e3c;
+    transform: translateY(2px);
+}
+
+/* Weather info section */
+.weather-info {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.weather-info p {
+    margin: 10px 0;
+}
+
+/* Emoji container */
+#emoji-container {
+    font-size: 60px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Additional responsive design */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .input-container input {
+        max-width: 100%;
+    }
+
+    .input-container button {
+        max-width: 100%;
+    }
+}
